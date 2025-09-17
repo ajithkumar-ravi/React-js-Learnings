@@ -7,9 +7,11 @@ function App() {
 
   return (
     <>
-      <Header user={user} />
-      <Content />
-      <Footer />
+      <div className="app">
+        <Header user={user} />
+        <Content />
+        <Footer user = "ak"/>
+      </div>
     </>
   );
 }
