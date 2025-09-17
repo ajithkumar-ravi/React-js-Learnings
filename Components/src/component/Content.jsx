@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
-//Default Export
-export default class Content extends Component {
-  render() {
-    return (
-      <div>Content</div>
-    )
-  }
+import React from 'react'
+
+const Content = () => {
+  return (
+    <main>
+      <h1 style={{backgroundColor:"red", color: "white"}}>Main Contents</h1>
+    </main>
+  )
 }
+
+export default Content
