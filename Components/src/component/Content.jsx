@@ -15,6 +15,9 @@ let NewButton = styled(Button)`
 
 function printSomething(){
   console.log("Hello");
+}
+function printSomething1(user){
+  console.log(user);
   
 }
 const Content = () => {
@@ -22,7 +25,7 @@ const Content = () => {
     <main>
       <h1 style={{ backgroundColor: "red", color: "white" }}>Main Contents</h1>
       <Button onClick={printSomething}>Click Me</Button>
-      <NewButton>New btn</NewButton>
+      <NewButton onClick={()=>{printSomething1("Ajith")}}>New btn</NewButton>
     </main>
   );
 };
