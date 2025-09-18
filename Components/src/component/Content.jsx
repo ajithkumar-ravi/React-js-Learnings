@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CounterApp from "./CounterApp";
 
 let Button = styled.button`
   background-color: blue;
@@ -25,6 +26,7 @@ function printSomething1(evant){
   user = "Settan";
   
 }
+
  
 const Content = () => {
   return (
@@ -32,6 +34,7 @@ const Content = () => {
       <h1 style={{ backgroundColor: "red", color: "white" }}>Main Contents - {user}</h1>
       <Button onClick={printSomething}>Click Me</Button>
       <NewButton onClick={(e)=>{printSomething1(e)}}>New btn</NewButton>
+      <CounterApp/>
     </main>
   );
 };
