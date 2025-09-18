@@ -6,6 +6,7 @@ let Button = styled.button`
   color: white;
   width: 100px;
   hight: 100px;
+  padding: 10px;
 `;
 
 let NewButton = styled(Button)`
@@ -13,19 +14,24 @@ let NewButton = styled(Button)`
   box-shadow: 10px 10px 5px black;
 `;
 
-function printSomething(){
-  console.log("Hello");
+let user = "Dhanush";
+
+function printSomething(e){
+  // console.log("Hello");
+  user = "Johny";
 }
-function printSomething1(user){
-  console.log(user);
+function printSomething1(evant){
+  // console.log(user);
+  user = "Settan";
   
 }
+ 
 const Content = () => {
   return (
     <main>
-      <h1 style={{ backgroundColor: "red", color: "white" }}>Main Contents</h1>
+      <h1 style={{ backgroundColor: "red", color: "white" }}>Main Contents - {user}</h1>
       <Button onClick={printSomething}>Click Me</Button>
-      <NewButton onClick={()=>{printSomething1("Ajith")}}>New btn</NewButton>
+      <NewButton onClick={(e)=>{printSomething1(e)}}>New btn</NewButton>
     </main>
   );
 };
