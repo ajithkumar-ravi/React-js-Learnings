@@ -8,12 +8,18 @@ const CounterApp = () => {
   function handleIncrease() {
     // count += 1;
     // console.log(count);
-    setCount(count + 1);
+    // setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
+    // this is best practice above mentioned
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
   }
   function handleDecrease() {
     //     count -= 1;
     //     console.log(count);
-    setCount(count - 1);
+    // setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
+    setCount((prevCount) => prevCount - 1);
   }
 
   return (
