@@ -31,9 +31,6 @@ function printSomething1(evant){
 const Content = () => {
   return (
     <main>
-      <h1 style={{ backgroundColor: "red", color: "white" }}>Main Contents - {user}</h1>
-      <Button onClick={printSomething}>Click Me</Button>
-      <NewButton onClick={(e)=>{printSomething1(e)}}>New btn</NewButton>
       <CounterApp/>
     </main>
   );

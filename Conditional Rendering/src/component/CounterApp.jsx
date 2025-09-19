@@ -34,11 +34,8 @@ const CounterApp = () => {
 
   return (
     <div>
-      <h2>
-        Counter Application - {count} - {sample}{" "}
-      </h2>
+      <h2>Click to unlock Reward ✨</h2>
       <button onClick={handleIncrease}>Increase</button>
-      <button onClick={handleDecrease}>Decrease</button>
     </div>
   );
 };
