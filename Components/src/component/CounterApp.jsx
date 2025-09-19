@@ -5,6 +5,16 @@ const CounterApp = () => {
 
   let [count, setCount] = useState(0);
 
+  function returnState() {
+    console.log(100);
+    return 100;
+  }
+
+  //state
+  let [sample, setSample] = useState(() => {
+    return returnState();
+  });
+
   function handleIncrease() {
     // count += 1;
     // console.log(count);
@@ -24,7 +34,9 @@ const CounterApp = () => {
 
   return (
     <div>
-      <h1>Counter Application - {count}</h1>
+      <h2>
+        Counter Application - {count} - {sample}{" "}
+      </h2>
       <button onClick={handleIncrease}>Increase</button>
       <button onClick={handleDecrease}>Decrease</button>
     </div>
