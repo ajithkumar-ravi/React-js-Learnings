@@ -1,5 +1,13 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
+const Button = styled.button`
+  width: 150px;
+  hight: 100px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+`;
 const CounterApp = () => {
   // let count = 0;
 
@@ -34,8 +42,18 @@ const CounterApp = () => {
 
   return (
     <div>
-      <h2>Click to unlock Reward ✨</h2>
-      <button onClick={handleIncrease}>Increase</button>
+      <h2>Click to unlock Reward ✨ {count}</h2>
+      <Button onClick={handleIncrease}>Click</Button>
+      {/* Ternary Operatior */}
+      {count >= 10 ? (
+        <p>You unlocked 10% Discount</p>
+      ) : (
+        <p>Click 10 time to unlock Reward</p>
+      )}
+      {/* logical AND Operatior */}
+      {
+        
+      }
     </div>
   );
 };
