@@ -12,6 +12,7 @@ const CounterApp = () => {
   // let count = 0;
 
   let [count, setCount] = useState(0);
+  let [data, setData] = useState("Success"); // loading, success, error
 
   function returnState() {
     console.log(100);
@@ -71,11 +72,31 @@ const CounterApp = () => {
     setCount((prevCount) => prevCount - 1);
   }
 
+  let displayComponent = () => {
+    switch (data) {
+      case "Loading": return <LoadingComponent />;
+        break;
+      case "Success": return <SuccessComponent />;
+        break;
+      case "Error": return <ErrorComponent />;
+        break;  
+    
+    }
+  }
+
   return (
     <div>
       <h2>Click to unlock Reward ✨ </h2>
       <Button onClick={handleIncrease}>Click</Button>
       {message}
+      {
+        count >= 30 && <Button onClick={ResetCount}>Reset Click</Button>
+      }
+
+      {
+        displayComponent()
+      }
+
       {/* Ternary Operatior */}
       {/* {count >= 10 ? (
         <p>You unlocked 10% Discount</p>
@@ -91,3 +112,22 @@ const CounterApp = () => {
 };
 
 export default CounterApp;
+
+
+function LoadingComponent() {
+  return (
+    <h6>Loading....</h6>
+  )
+}
+
+function SuccessComponent() {
+  return (
+    <h6>Success✨</h6>
+  )
+}
+
+function ErrorComponent() {
+  return (
+    <h6>Error❌</h6>
+  )
+}
