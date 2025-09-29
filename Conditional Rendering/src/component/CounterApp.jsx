@@ -23,6 +23,9 @@ const CounterApp = () => {
     return returnState();
   });
 
+  let message ;
+  let remainingClicks = 10 - count;
+
   function handleIncrease() {
     // count += 1;
     // console.log(count);
@@ -32,6 +35,34 @@ const CounterApp = () => {
     setCount((prevCount) => prevCount + 1);
     setCount((prevCount) => prevCount + 1);
   }
+
+  if (count < 10) {
+    message = (
+      <div>
+        <h3>You Clicked {count} Times</h3>
+        <p>You still {remainingClicks} more times to reach a 10% Discount</p>
+      </div>
+    )
+  }
+  else if (count >= 10 && count < 20) {
+    message = (
+      <div>
+        <h3>You Clicked {count} Times</h3>
+        <p>Congrats! You unlocked 10% Discount👌</p>
+      </div>
+    )
+  }
+  else {
+    message = (
+      <div>
+        <h3>You Clicked {count} Times</h3>
+        <p>Congrats! Anne Neeyane Idhuuu.. You Unlocked 20% Discount👌</p>
+      </div>
+    )
+  }
+    
+
+
   function handleDecrease() {
     //     count -= 1;
     //     console.log(count);
@@ -42,18 +73,19 @@ const CounterApp = () => {
 
   return (
     <div>
-      <h2>Click to unlock Reward ✨ {count}</h2>
+      <h2>Click to unlock Reward ✨ </h2>
       <Button onClick={handleIncrease}>Click</Button>
+      {message}
       {/* Ternary Operatior */}
-      {count >= 10 ? (
+      {/* {count >= 10 ? (
         <p>You unlocked 10% Discount</p>
       ) : (
         <p>Click 10 time to unlock Reward</p>
-      )}
+      )} */}
       {/* logical AND Operatior */}
-      {
-        
-      }
+      {/* {
+        count >= 20 && <p>Ennadhu 20% Discount ah</p>
+      } */}
     </div>
   );
 };
