@@ -12,7 +12,7 @@ const CounterApp = () => {
   // let count = 0;
 
   let [count, setCount] = useState(0);
-  let [data, setData] = useState("Success"); // loading, success, error
+  let [data, setData] = useState("Loading"); // loading, success, error
 
   function returnState() {
     console.log(100);
@@ -73,6 +73,7 @@ const CounterApp = () => {
   }
 
   let displayComponent = () => {
+    
     switch (data) {
       case "Loading": return <LoadingComponent />;
         break;
@@ -112,7 +113,6 @@ const CounterApp = () => {
 };
 
 export default CounterApp;
-
 
 function LoadingComponent() {
   return (
