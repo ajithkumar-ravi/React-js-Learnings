@@ -15,6 +15,8 @@ function App() {
     inputRef.current = input
   }, [input])
 
+  // UseRef eppovum one step backlathe irukkum compare then UseStage
+  
   const displaly = () => {
     console.log(inputRef.current.value);
   }
