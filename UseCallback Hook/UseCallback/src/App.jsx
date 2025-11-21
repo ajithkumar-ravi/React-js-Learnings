@@ -1,6 +1,10 @@
 import React, { useCallback, useState } from 'react'
 import List from './list'
 
+
+//  UseCallback always return entire funtion but useMeno always ret
+// urn a value this is the difference b/w useCallback and UseMeno
+
 function App() {
   const [number, setNumber] = useState(0)
   const [dark, setDark] = useState(false)
