@@ -5,7 +5,7 @@ const Container = () => {
   return (
     <div>
         <h1>Container Compt</h1>
-        <Users/>
+        <Users />
     </div>
   )
 }

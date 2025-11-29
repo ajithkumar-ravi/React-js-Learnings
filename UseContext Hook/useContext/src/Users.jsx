@@ -5,7 +5,7 @@ const Users = () => {
   return (
     <div>
         <h1>Users Compt</h1>
-        <User/>
+        <User />
     </div>
   )
 }
