@@ -1,0 +1,15 @@
+*{
+    background-color: black;
+    width: 100%;
+}
+
+ul {
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: transparent;
+}
+
+ul > link {
+    margin: 10px;
+    padding: 15px;
+}
