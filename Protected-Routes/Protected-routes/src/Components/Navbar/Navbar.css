@@ -1,4 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 nav{
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 5px 12px;
 }
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    list-style-type: none;
+    color: white;
+    cursor: pointer;
+}
+
